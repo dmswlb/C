@@ -1,0 +1,25 @@
+//#2. bubble sort
+#include <stdio.h>
+int main() {
+	int a[5];
+	int i, j, l, tmp;
+	printf("정수 5개를 입력하라: ");
+	for (i = 0; i < 5; i++) {
+		scanf_s("%d", a[i]);
+	}
+	printf("원배열: ");
+	for (i = 0; i < 5; i++) {
+		printf("%d ", a[i]);
+	}
+	for (i = 0; i < 4; i++) {
+		l = 3 - i;
+		for (j = 0; j <= l; j++) {
+			if (a[j] > a[j + 1]) {
+				tmp = a[j];
+				a[j] = a[j + 1];
+				a[j + 1] = tmp;
+			}
+		}
+	}
+	return 0;
+}
